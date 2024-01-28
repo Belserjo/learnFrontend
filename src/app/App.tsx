@@ -1,10 +1,10 @@
 import React, {Suspense} from 'react';
 import './styles/index.scss'
 import {Link, Route, Routes} from "react-router-dom";
-import AboutPageAsync from "./pages/AboutPage/AboutPageAsync";
-import MainPageAsync from "./pages/MainPage/MainPageAsync";
-import {useTheme} from "./theme/useTheme";
-import {ClassNames} from "./helpers/classNames/classNames";
+import AboutPageAsync from "pages/AboutPage";
+import MainPageAsync from "pages/MainPage";
+import {useTheme} from "app/providers/ThemeProvider";
+import {ClassNames} from "shared/lib/classNames/classNames";
 
 
 const App = () => {
