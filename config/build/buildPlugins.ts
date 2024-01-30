@@ -15,6 +15,7 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
         }), //для создания отдельного css файла для каждого js файла
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev)
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
