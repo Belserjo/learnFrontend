@@ -3,7 +3,8 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
     branches: [ master ]
-  pull_request:  [ master ]
+  pull_request:
+    branches:  [ master ]
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -31,17 +32,3 @@ jobs:
         run: npm run lint:scss
       - name: linting css
         run: npm run lint:scss
-
-
-#"start": "webpack serve --env port=3000",
-#"build:prod": "webpack --env mode=production",
-#"build:dev": "webpack --env mode=development",
-#"lint:ts": " eslint \"**/*.{ts,tsx}\"",
-#"lint:ts:fix": " eslint \"**/*.{ts,tsx}\" --fix",
-#"lint:scss": "npx stylelint \"**/*.scss\"",
-#"lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
-#"test:unit": "jest --config ./config/jest/jest.config.ts",
-#"test:ui": "npx loki test",
-#"test:ui:ok": "npx loki approve",
-#"storybook": "storybook dev -p 6006 -c ./config/storybook",
-#"storybook:build": "storybook build -c ./config/storybook"
