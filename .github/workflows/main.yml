@@ -1,0 +1,47 @@
+name: linting, testing, building
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  push:
+    branches: [ master ]
+  pull_request:  [ master ]
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 17.x ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install modules
+        run: npm install
+      - name: build production project
+        run: npm run build:prod
+      - name: linting typescript
+        run: npm run lint:ts
+      - name: linting css
+        run: npm run lint:scss
+      - name: unit testing
+        run: npm run test:unit
+      - name: linting css
+        run: npm run lint:scss
+      - name: linting css
+        run: npm run lint:scss
+
+
+#"start": "webpack serve --env port=3000",
+#"build:prod": "webpack --env mode=production",
+#"build:dev": "webpack --env mode=development",
+#"lint:ts": " eslint \"**/*.{ts,tsx}\"",
+#"lint:ts:fix": " eslint \"**/*.{ts,tsx}\" --fix",
+#"lint:scss": "npx stylelint \"**/*.scss\"",
+#"lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
+#"test:unit": "jest --config ./config/jest/jest.config.ts",
+#"test:ui": "npx loki test",
+#"test:ui:ok": "npx loki approve",
+#"storybook": "storybook dev -p 6006 -c ./config/storybook",
+#"storybook:build": "storybook build -c ./config/storybook"
