@@ -1,5 +1,3 @@
-import React from 'react';
-
 declare module '*.scss' {
     interface IClassNames {
         [className: string]: string
