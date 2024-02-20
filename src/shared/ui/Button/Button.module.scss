@@ -9,3 +9,11 @@
     outline: none;
     background: none;
 }
+
+.outline {
+    padding: 10px 15px;
+    border: 4px solid var(--primary-color);
+    color: var(--primary-color);
+    background: none;
+    border-radius: 10px;
+}
