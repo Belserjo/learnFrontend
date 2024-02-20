@@ -3,7 +3,6 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeSwitcher } from './ThemeSwitcher';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
     title: 'widgets/ThemeSwitcher',
     component: ThemeSwitcher,
