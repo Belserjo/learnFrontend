@@ -62,18 +62,18 @@ module.exports = {
         'jsx-a11y/click-events-have-key-events': 'off',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
+        'no-param-reassign': 'off',
     },
     globals: {
         __IS_DEV__: true,
     },
     overrides: [
         {
-            files: ['**/src/**/*.{test,stories}.{ts,tsx}', '**/src/**/*.ts'],
+            files: ['**/src/**/*.{test,stories,d}.{ts,tsx}'],
             rules: {
                 'i18next/no-literal-string': 'off',
                 'no-undef': 'off',
                 'max-len': 'off',
-
             },
         },
     ],

@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
     ReactNode, useRef, useState, MouseEvent, useEffect, useCallback,
@@ -55,7 +54,6 @@ export const Modal = (props:ModalProps) => {
     const onContentClick = (e: MouseEvent) => {
         e.stopPropagation();
     };
-    const { t } = useTranslation();
 
     return (
         <Portal>
