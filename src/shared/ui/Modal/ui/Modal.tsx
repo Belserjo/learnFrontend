@@ -10,6 +10,7 @@ className?: string;
 children?: ReactNode;
 isOpen?: boolean;
 onClose?: () => void;
+lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
@@ -20,15 +21,24 @@ export const Modal = (props:ModalProps) => {
         children,
         isOpen,
         onClose,
+        lazy,
     } = props;
 
     const [isClosing, setIsClosing] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };
+
+    useEffect(() => {
+        if (isOpen) {
+            setIsMounted(true);
+        }
+    }, [isOpen]);
+
     const closeHandle = useCallback(() => {
         if (onClose) {
             setIsClosing(true);
@@ -54,6 +64,10 @@ export const Modal = (props:ModalProps) => {
     const onContentClick = (e: MouseEvent) => {
         e.stopPropagation();
     };
+
+    if (lazy && !isMounted) {
+        return null;
+    }
 
     return (
         <Portal>
