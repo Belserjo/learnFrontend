@@ -24,6 +24,7 @@ module.exports = {
         'react-hooks',
     ],
     rules: {
+        'linebreak-style': 0,
         'react/jsx-indent': [2, 4],
         'max-len': ['error', {
             code: 120,

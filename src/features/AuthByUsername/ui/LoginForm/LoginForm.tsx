@@ -3,20 +3,21 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { memo, useCallback } from 'react';
 import { Input } from 'shared/ui/Input/Input';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector, useStore } from 'react-redux';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { LoginByUsername } from '../../model/servises/loginByUsername/loginByUsername';
 import { getLoginState } from '../../model/selectors/getLoginState/getLoginState';
 import { loginActions } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 
-interface LoginFormProps {
+export interface LoginFormProps {
     className?: string;
 }
 
-export const LoginForm = memo(({ className }:LoginFormProps) => {
+const LoginForm = memo(({ className }:LoginFormProps) => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
+    const store = useStore();
     const {
         username, password, error, isLoading,
     } = useSelector(getLoginState);
@@ -65,3 +66,5 @@ export const LoginForm = memo(({ className }:LoginFormProps) => {
         </div>
     );
 });
+
+export default LoginForm;
