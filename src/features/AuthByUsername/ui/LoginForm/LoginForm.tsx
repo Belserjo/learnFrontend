@@ -10,7 +10,7 @@ import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLogi
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
-import { LoginByUsername } from '../../model/servises/loginByUsername/loginByUsername';
+import { loginByUsername } from '../../model/servises/loginByUsername/loginByUsername';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 
@@ -39,7 +39,7 @@ const LoginForm = memo(({ className }:LoginFormProps) => {
     }, [dispatch]);
 
     const onLoginClick = useCallback(() => {
-        dispatch(LoginByUsername({ username, password }));
+        dispatch(loginByUsername({ username, password }));
     }, [dispatch, password, username]);
 
     return (

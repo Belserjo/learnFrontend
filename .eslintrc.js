@@ -64,6 +64,11 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
+        'lines-between-class-members': [
+            'error',
+            'always',
+            { exceptAfterSingleLine: true },
+        ],
     },
     globals: {
         __IS_DEV__: true,
