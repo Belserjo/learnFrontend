@@ -2,6 +2,7 @@ const jsonServer = require('json-server');
 const fs = require('fs');
 // const jwt = require('jsonwebtoken');
 const path = require('path');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const cors = require('cors');
 
 const PORT = 8000;
