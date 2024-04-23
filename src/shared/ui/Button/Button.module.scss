@@ -21,6 +21,13 @@
     color: var(--primary-color);
     background: none;
     border-radius: 10px;
+
+    &_red {
+        border: 4px solid var(--red-light);
+        color: var(--red-light);
+        background: none;
+        border-radius: 10px;
+    }
 }
 
 .background {

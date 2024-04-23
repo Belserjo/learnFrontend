@@ -11,6 +11,16 @@ const preview: Preview = {
         (RouteDecorator),
         (StoreDecorator({
             loginForm: { username: 'username', password: 'pass' },
+            profile: {
+                data: {
+                    username: 'username', avatar: '', country: 'Rus', lastname: 'lastname', age: 30, city: 'city', first: 'firstname', currency: 'rub',
+                },
+                isLoading: false,
+                error: '',
+                form: {
+                    username: 'username', avatar: '', country: 'Rus', lastname: 'lastname', age: 30, city: 'city', first: 'firstname', currency: 'rub',
+                },
+            },
         })),
     ],
     parameters: {
