@@ -58,7 +58,7 @@
   "profile": {
     "first": "Sergey",
     "lastname": "Беляцкий",
-    "age": "32",
+    "age": 11,
     "currency": "USD",
     "country": "Russia",
     "city": "Tomsk",

@@ -31,11 +31,11 @@ export const Select = memo((props:SelectProps) => {
         <option
             className={cls.option}
             value={opt.value}
-            key={value}
+            key={opt.value}
         >
             {opt.content}
         </option>
-    ))), [options, value]);
+    ))), [options]);
     const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
         if (onChange) {
             onChange?.(e.target.value);
