@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import avatar from 'shared/assets/test/statick.jpg';
+// import avatar from 'shared/assets/test/statick.jpg';
 import { ProfileCard } from './ProfileCard';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -24,7 +24,7 @@ export const Normal: Story = {
             city: 'City',
             country: Country.Russia,
             currency: Currency.RUB,
-            avatar,
+            avatar: 'https://sun6-20.userapi.com/s/v1/ig1/5m-fx30S9InZ_MED5NdKNRKJiziFYykuHQKsaV1HCgSu5a-Xv4hZXEcsrKg-LOtV23g8vwFY.jpg?size=980x980&quality=96&crop=0,0,980,980&ava=1',
         },
     },
 
