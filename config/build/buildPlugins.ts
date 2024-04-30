@@ -4,7 +4,9 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
-export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({
+    paths, isDev, apiUrl, project,
+}: BuildOptions): webpack.WebpackPluginInstance[] {
     const plugins = [new HTMLWebpackPlugin({
         template: paths.html, // задаём шаблон html файла для сборки
     }),
@@ -15,6 +17,8 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     }), // для создания отдельного css файла для каждого js файла
     new webpack.DefinePlugin({
         __IS_DEV__: JSON.stringify(isDev),
+        __API__: JSON.stringify(apiUrl),
+        __PROJECT__: JSON.stringify(project),
     }),
     ];
 

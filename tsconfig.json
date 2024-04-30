@@ -9,6 +9,7 @@
     "target": "es5", //в какую спецификацию компилируем: для поддержки большенства браузеров
     "jsx": "react-jsx",
     "allowJs": true,
+    "strict": true,
     "moduleResolution": "node",
     //для абсолютного импорта
     "baseUrl": ".",
