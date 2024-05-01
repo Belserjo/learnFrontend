@@ -14,6 +14,7 @@ export function BuildWebpackConfig(options: BuildOptions): webpack.Configuration
             filename: '[name].[contenthash].js', // чтобы имя не было всегда одинаковым, т.к. браузер кеширует файлы, обновленная инфа может не появиться, а так каждый раз будет новое имя
             path: paths.build,
             clean: true, // автоматически очищает папку билд при каждой сборке
+            publicPath: '/', // Базовый путь для всех ресурсов в нашем приложении
         },
         plugins: buildPlugins(options),
         module: {
