@@ -45,7 +45,6 @@ const ProfilePage = ({ className }:ProfilePageProps) => {
         [ValidateProfileError.INCORRECT_PROFILE_CITY]: t('Некорректный формат названия города'),
         [ValidateProfileError.NO_DATA]: t('Данные не указаны'),
     };
-    console.log(__PROJECT__);
 
     useEffect(() => {
         if (__PROJECT__ !== 'storybook') {
