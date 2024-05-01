@@ -24,7 +24,7 @@ export const Normal: Story = {
             city: 'City',
             country: Country.Russia,
             currency: Currency.RUB,
-            avatar: 'https://cs12.pikabu.ru/post_img/big/2022/10/24/2/1666571824193118478.jpg',
+            avatar: 'https://sun6-22.userapi.com/s/v1/if2/duATzHsPkPQ8viqRatWYToqxa5ba-Rypw--E2tMFqua-nZlHk-GV-qg_VG8fgazN_I7g-i-_az_2C_nZaIRNQRoD.jpg?size=100x100&quality=96&crop=280,80,640,640&blur=7,3&ava=1',
         },
     },
 

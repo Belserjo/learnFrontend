@@ -21,6 +21,7 @@ const meta = {
                 city: 'City',
                 country: Country.Russia,
                 currency: Currency.RUB,
+                avatar,
             },
         },
     })],
