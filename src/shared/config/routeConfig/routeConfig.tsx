@@ -15,9 +15,10 @@ export enum AppRoutes {
     MAIN = 'main',
     ABOUT = 'about',
     PROFILE = 'profile',
-    NOT_FOUND = 'not_found',
     ARTICLES = 'articles',
-    ARTICLES_DETAILS = 'articles_details'
+    ARTICLES_DETAILS = 'articles_details',
+    // last
+    NOT_FOUND = 'not_found',
 }
 
 export const routePath: Record<AppRoutes, string> = {
@@ -26,6 +27,7 @@ export const routePath: Record<AppRoutes, string> = {
     [AppRoutes.PROFILE]: '/profile',
     [AppRoutes.ARTICLES]: '/articles',
     [AppRoutes.ARTICLES_DETAILS]: '/articles/', // + :id
+    // last
     [AppRoutes.NOT_FOUND]: '*',
 };
 
@@ -45,12 +47,12 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     },
     [AppRoutes.ARTICLES]: {
         path: routePath.articles,
-        element: <ArticleDetailsPageAsync />,
+        element: <ArticlePageAsync />,
         authOnly: true,
     },
     [AppRoutes.ARTICLES_DETAILS]: {
         path: `${routePath.articles_details}:id`,
-        element: <ArticlePageAsync />,
+        element: <ArticleDetailsPageAsync />,
         authOnly: true,
     },
     [AppRoutes.NOT_FOUND]: {

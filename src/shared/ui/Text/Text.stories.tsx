@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -69,3 +69,11 @@ export const TextOnlyLight: Story = {
     },
 };
 TextOnlyLight.decorators = [ThemeDecorator(Theme.LIGHT)];
+
+export const SizeL: Story = {
+    args: {
+        text: 'TEXT',
+        title: 'TITLE',
+        size: TextSize.L,
+    },
+};
