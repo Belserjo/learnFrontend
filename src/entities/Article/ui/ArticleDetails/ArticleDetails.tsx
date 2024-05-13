@@ -13,13 +13,13 @@ import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { ArticleCodeBlockComponent } from 'entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { articleDetailsReducer } from 'entities/Article/model/slices/articleDetailsSlice';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
     getArticleDetailsLoading,
 } from '../../model/selectors/articleDetails';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
-import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import cls from './ArticleDetails.module.scss';
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 import { ArticleImageBlockComponent } from '../../ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
@@ -27,7 +27,7 @@ import { ArticleTextBlockComponent } from '../../ui/ArticleTextBlockComponent/Ar
 
 interface ArticleDetailsProps {
     className?: string;
-    id?: string;
+    id: string;
 }
 
 const reducers: ReducersList = {
@@ -78,7 +78,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     }, []);
 
     useEffect(() => {
-        if (__PROJECT__ !== 'storybook' && id != null) {
+        if (__PROJECT__ !== 'storybook') {
             dispatch(fetchArticleById(id));
         }
     }, [dispatch, id]);

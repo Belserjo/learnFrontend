@@ -94,11 +94,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-    args: {},
+    args: {
+        id: '1',
+    },
 };
 
 export const PrimaryIsLoading: Story = {
-    args: {},
+    args: {
+        id: '1',
+    },
 };
 PrimaryIsLoading.decorators = [StoreDecorator({
     articleDetails: {
@@ -107,7 +111,7 @@ PrimaryIsLoading.decorators = [StoreDecorator({
 })];
 export const PrimaryError: Story = {
     args: {
-
+        id: '1',
     },
 };
 PrimaryError.decorators = [StoreDecorator({
