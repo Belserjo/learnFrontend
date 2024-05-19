@@ -143,7 +143,7 @@
       "avatar": "https://gas-kvas.com/grafic/uploads/posts/2023-10/1696422628_gas-kvas-com-p-kartinki-na-avu-44.jpg"
     }
   ],
-  "profile": [
+  "profile":
     {
       "first": "Sergey",
       "lastname": "Беляцкий",
@@ -153,16 +153,5 @@
       "city": "Tomsk",
       "username": "ADMIN",
       "avatar": "https://sun6-22.userapi.com/s/v1/if2/duATzHsPkPQ8viqRatWYToqxa5ba-Rypw--E2tMFqua-nZlHk-GV-qg_VG8fgazN_I7g-i-_az_2C_nZaIRNQRoD.jpg?size=100x100&quality=96&crop=280,80,640,640&blur=7,3&ava=1"
-    },
-    {
-      "first": "Test",
-      "lastname": "Test",
-      "age": 33,
-      "currency": "RUB",
-      "country": "Russia",
-      "city": "Tomsk",
-      "username": "USER",
-      "avatar": "https://gas-kvas.com/grafic/uploads/posts/2023-10/1696422628_gas-kvas-com-p-kartinki-na-avu-44.jpg"
     }
-  ]
 }
