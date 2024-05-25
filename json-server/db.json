@@ -127,6 +127,24 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "ymDB6NQ"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "dfgdfggfdfgfdfgdfgdfgdfgdfgdfg",
+      "id": "gUqpsk0"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "fghfgh",
+      "id": "XmVl733"
     }
   ],
   "users": [
@@ -143,15 +161,14 @@
       "avatar": "https://gas-kvas.com/grafic/uploads/posts/2023-10/1696422628_gas-kvas-com-p-kartinki-na-avu-44.jpg"
     }
   ],
-  "profile":
-    {
-      "first": "Sergey",
-      "lastname": "Беляцкий",
-      "age": 32,
-      "currency": "RUB",
-      "country": "Russia",
-      "city": "Tomsk",
-      "username": "ADMIN",
-      "avatar": "https://sun6-22.userapi.com/s/v1/if2/duATzHsPkPQ8viqRatWYToqxa5ba-Rypw--E2tMFqua-nZlHk-GV-qg_VG8fgazN_I7g-i-_az_2C_nZaIRNQRoD.jpg?size=100x100&quality=96&crop=280,80,640,640&blur=7,3&ava=1"
-    }
+  "profile": {
+    "first": "Sergey",
+    "lastname": "Беляцкий",
+    "age": 32,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Tomsk",
+    "username": "ADMIN",
+    "avatar": "https://sun6-22.userapi.com/s/v1/if2/duATzHsPkPQ8viqRatWYToqxa5ba-Rypw--E2tMFqua-nZlHk-GV-qg_VG8fgazN_I7g-i-_az_2C_nZaIRNQRoD.jpg?size=100x100&quality=96&crop=280,80,640,640&blur=7,3&ava=1"
+  }
 }
