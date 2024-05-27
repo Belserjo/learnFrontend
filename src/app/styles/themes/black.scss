@@ -1,5 +1,5 @@
 .app_theme_black {
-    --bg-color: #545050;
+    --bg-color: #676464;
     --inverted-bg-color: #2f4878;
     --primary-color: #fff;
     --secondary-color: #000;
@@ -7,4 +7,9 @@
     --inverted-secondary-color: #282828;
     --red-light: #ff4949;
     --red-dark: #ffbdbd;
+
+    // skeleton
+    --skeleton-color: #64718c;
+    --skeleton-shadow: #969696;
+    --code-bg: #a6a6a6;
 }
