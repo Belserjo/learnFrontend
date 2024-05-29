@@ -1,11 +1,11 @@
 import { TestAsyncThunk } from 'shared/lib/test/testAsyncThunk/testAsyncThunk';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import extractTranslationRenderProp from 'babel-plugin-i18next-extract/extractors/translationRenderProp';
 import { ValidateProfileError } from 'entities/Profile';
 import { updateProfileData } from './updateProfileData';
 
 const data = {
+    id: '1',
     username: 'Nickname',
     age: 30,
     first: 'Name',

@@ -5,6 +5,8 @@ import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import { Comment } from 'entities/Comment';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Text } from 'shared/ui/Text/Text';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { routePath } from 'shared/config/routeConfig/routeConfig';
 import cls from './CommentCard.module.scss';
 
 interface CommentCardProps {
@@ -22,7 +24,7 @@ export const CommentCard = memo((props: CommentCardProps) => {
     const { t } = useTranslation();
     if (isLoading) {
         return (
-            <div className={classNames(cls.CommentCard, {}, [className])}>
+            <div className={classNames(cls.CommentCard, {}, [className, cls.loading])}>
 
                 <div className={cls.header}>
                     <Skeleton
@@ -43,15 +45,23 @@ export const CommentCard = memo((props: CommentCardProps) => {
             </div>
         );
     }
+
+    if (!comment) {
+        return null;
+    }
+
     return (
         <div className={classNames(cls.CommentCard, {}, [className])}>
-            <div className={cls.header}>
+            <AppLink
+                to={`${routePath.profile}${comment?.user.id}`}
+                className={cls.header}
+            >
                 {comment?.user.avatar
                     ? <Avatar size={30} src={comment?.user.avatar} />
                     : null}
 
                 <Text title={comment?.user.username} />
-            </div>
+            </AppLink>
             <Text className={cls.text} text={comment?.text} />
         </div>
     );
