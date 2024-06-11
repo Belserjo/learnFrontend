@@ -8,19 +8,20 @@ import { BuildOptions } from './types/config';
 export function buildPlugins({
     paths, isDev, apiUrl, project,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-    const plugins = [new HTMLWebpackPlugin({
-        template: paths.html, // задаём шаблон html файла для сборки
-    }),
-    new webpack.ProgressPlugin(), // для визуализации % сборки проекта
-    new MiniCssExtractPlugin({
-        filename: 'css/[name].[contenthash:8].css',
-        chunkFilename: 'css/[name].[contenthash:8].css',
-    }), // для создания отдельного css файла для каждого js файла
-    new webpack.DefinePlugin({
-        __IS_DEV__: JSON.stringify(isDev),
-        __API__: JSON.stringify(apiUrl),
-        __PROJECT__: JSON.stringify(project),
-    }),
+    const plugins = [
+        new HTMLWebpackPlugin({
+            template: paths.html, // задаём шаблон html файла для сборки
+        }),
+        new webpack.ProgressPlugin(), // для визуализации % сборки проекта
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].[contenthash:8].css',
+            chunkFilename: 'css/[name].[contenthash:8].css',
+        }), // для создания отдельного css файла для каждого js файла
+        new webpack.DefinePlugin({
+            __IS_DEV__: JSON.stringify(isDev),
+            __API__: JSON.stringify(apiUrl),
+            __PROJECT__: JSON.stringify(project),
+        }),
     ];
 
     if (isDev) {
