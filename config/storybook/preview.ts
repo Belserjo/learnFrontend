@@ -7,18 +7,35 @@ import { StoreDecorator } from '../../src/shared/config/storybook/StoreDecorator
 
 const preview: Preview = {
     decorators: [
-        (ThemeDecorator(Theme.DARK)),
+        (ThemeDecorator(Theme.BLACK)),
         (RouteDecorator),
         (StoreDecorator({
-            loginForm: { username: 'username', password: 'pass' },
+            loginForm: {
+                username: 'username',
+                password: 'pass',
+            },
             profile: {
                 data: {
-                    username: 'username', avatar: '', country: 'Rus', lastname: 'lastname', age: 30, city: 'city', first: 'firstname', currency: 'rub',
+                    username: 'username',
+                    avatar: '',
+                    country: 'Rus',
+                    lastname: 'lastname',
+                    age: 30,
+                    city: 'city',
+                    first: 'firstname',
+                    currency: 'rub',
                 },
                 isLoading: false,
                 error: '',
                 form: {
-                    username: 'username', avatar: '', country: 'Rus', lastname: 'lastname', age: 30, city: 'city', first: 'firstname', currency: 'rub',
+                    username: 'username',
+                    avatar: '',
+                    country: 'Rus',
+                    lastname: 'lastname',
+                    age: 30,
+                    city: 'city',
+                    first: 'firstname',
+                    currency: 'rub',
                 },
             },
         })),

@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
+import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
 import cls from './ArticleList.module.scss';
 import { Article, ArticlesView } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -12,6 +13,16 @@ interface ArticleListProps {
     view?: ArticlesView;
 }
 
+const getSkeletons = (view: ArticlesView) => new Array(view === ArticlesView.BIG ? 3 : 9)
+    .fill(0)
+    .map((item, index) => (
+        <ArticleListItemSkeleton
+            key={index}
+            view={view}
+            className={cls.card}
+        />
+    ));
+
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
         className,
@@ -20,6 +31,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         view = ArticlesView.SMALL,
     } = props;
     const { t } = useTranslation();
+
     const renderArticle = (article: Article) => (
         <ArticleListItem
             article={article}
@@ -28,6 +40,16 @@ export const ArticleList = memo((props: ArticleListProps) => {
             className={cls.card}
         />
     );
+
+    if (isLoading) {
+        return (
+            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+                {
+                    getSkeletons(view)
+                }
+            </div>
+        );
+    }
 
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>

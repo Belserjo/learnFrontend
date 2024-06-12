@@ -98,6 +98,7 @@ const ArticlesPage = memo((props: ArticlesPageProps) => {
     return (
         <div className={classNames(cls.ArticlesPage, {}, [className])}>
             <ArticleList
+                isLoading
                 view={ArticlesView.BIG}
                 articles={new Array(16)
                     .fill(0)
