@@ -4,7 +4,6 @@ import {
 } from '@reduxjs/toolkit';
 import { Comment } from 'entities/Comment';
 import { StateSchema } from 'app/providers/StoreProvider';
-import { Article } from 'entities/Article';
 import {
     fetchCommentsByArticleId,
 } from 'pages/ArticleDetailsPage/model/servises/fetchCommentsByArticleId/fetchCommentsByArticleId';

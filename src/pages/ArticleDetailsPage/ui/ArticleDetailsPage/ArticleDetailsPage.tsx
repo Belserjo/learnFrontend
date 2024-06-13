@@ -17,7 +17,7 @@ import { fetchCommentsByArticleId } from '../../model/servises/fetchCommentsByAr
 import { addCommentForArticle } from '../../model/servises/addCommentForArticle/addCommentForArticle';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import cls from './ArticleDetailsPage.module.scss';
-import { articleDetailsCommentsReducer, getArticlesComments } from '../../model/slices/ArticleDetailsCommentsSlice';
+import { articleDetailsCommentsReducer, getArticlesComments } from '../../model/slices/articleDetailsCommentsSlice';
 
 interface ArticleDetailsPageProps {
     className?: string;
