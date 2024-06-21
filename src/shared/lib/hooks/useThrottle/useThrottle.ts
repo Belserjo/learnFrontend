@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef } from 'react';
-import setTimeout = jest.setTimeout;
 
 export function useThrottle(callback: (...args: any[]) => void, delay: number) {
     const throttleRef = useRef(false);
@@ -11,7 +10,6 @@ export function useThrottle(callback: (...args: any[]) => void, delay: number) {
 
             timeoutRef.current = setTimeout(() => {
                 throttleRef.current = false;
-                // @ts-ignore
             }, delay);
         }
     }, [callback, delay]);

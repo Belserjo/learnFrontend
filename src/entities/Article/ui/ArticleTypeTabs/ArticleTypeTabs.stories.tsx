@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ArticleViewSelector } from './ArticleViewSelector';
+import { ArticleTypeTabs } from './ArticleTypeTabs';
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-    title: 'shared/ArticleViewSelector',
-    component: ArticleViewSelector,
+    title: 'shared/ArticleTypeTabs',
+    component: ArticleTypeTabs,
 
-} satisfies Meta<typeof ArticleViewSelector>;
+} satisfies Meta<typeof ArticleTypeTabs>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
