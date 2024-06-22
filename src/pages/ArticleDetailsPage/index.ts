@@ -3,5 +3,6 @@ import ArticleDetailsPageAsync from './ui/ArticleDetailsPage/ArticleDetailsPageA
 export default ArticleDetailsPageAsync;
 
 export { ArticleDetailsCommentsSchema } from './model/types/ArticleDetailsCommentsSchema';
+export { ArticleDetailsRecommendationsSchema } from './model/types/ArticleDetailsRecommendationsSchema';
 
-// export { getArticlesComments } from './model/slices/ArticleDetailsCommentsSlice';
+export { ArticlesDetailsPageSchema } from './model/types';
