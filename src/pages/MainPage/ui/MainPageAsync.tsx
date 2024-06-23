@@ -1,8 +1,4 @@
 import { lazy } from 'react';
 
-const MainPageAsync = lazy(() => new Promise((res) => {
-    // @ts-ignore
-    setTimeout(() => res(import('./MainPage')), 1500);
-}));
-
+const MainPageAsync = lazy(() => import('./MainPage'));
 export default MainPageAsync;
