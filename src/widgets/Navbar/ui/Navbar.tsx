@@ -6,7 +6,7 @@ import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { routePath } from 'shared/config/routeConfig/routeConfig';
 import cls from './Navbar.module.scss';
 
@@ -36,8 +36,12 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 <Text
                     title={t('Пет проект APP')}
                     className={cls.appName}
+                    theme={TextTheme.INVERTED}
                 />
-                <AppLink to={routePath.articles_create}>
+                <AppLink
+                    theme={AppLinkTheme.INVERTED}
+                    to={routePath.articles_create}
+                >
                     {t('Создать статью')}
                 </AppLink>
                 <Button
