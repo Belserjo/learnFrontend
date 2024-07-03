@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { ArticleBlockType, ArticleType, Article } from 'entities/Article/model/types/article';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ArticleDetails } from './ArticleDetails';
+import { ArticleBlockType, ArticleType, Article } from '../../model/types/article';
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 
 const article: Article = {

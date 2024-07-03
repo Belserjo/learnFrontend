@@ -1,3 +1,3 @@
-import ProfilePageAsync from 'pages/ProfilePage/ui/ProfilePageAsync';
+import ProfilePageAsync from './ui/ProfilePageAsync';
 
 export default ProfilePageAsync;

@@ -12,8 +12,8 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
-import { ArticleCodeBlockComponent } from 'entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
-import { articleDetailsReducer } from 'entities/Article/model/slices/articleDetailsSlice';
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { articleDetailsReducer } from '../../model/slices/articleDetailsSlice';
 import {
     getArticleDetailsData,
     getArticleDetailsError,

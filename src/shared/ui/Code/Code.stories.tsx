@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import cls from 'shared/ui/Code/Code.module.scss';
 import { Code } from './Code';
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {

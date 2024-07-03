@@ -1,3 +1,5 @@
+const { error } = require('react-refresh-webpack-plugin/src/runtime/errorEventHandlers');
+
 module.exports = {
     env: {
         browser: true,
@@ -22,12 +24,13 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'belserjo-path-checker',
     ],
     rules: {
         'linebreak-style': 0,
         'react/jsx-indent': [2, 4],
         'max-len': ['error', {
-            code: 120,
+            code: 125,
             ignoreComments: true,
             ignoreUrls: true,
             ignoreStrings: true,
@@ -38,19 +41,14 @@ module.exports = {
         'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
-        'no-unused-vars': 'warn',
+        'no-unused-vars': 'off',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
-        'import/no-extraneous-dependencies': [
-            'warn',
-            {
-                devDependencies: true,
-            },
-        ],
+        'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': [
             'error',
@@ -72,6 +70,8 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
+        'belserjo-path-checker/path-checker': 'error',
+
     },
     globals: {
         __IS_DEV__: true,
