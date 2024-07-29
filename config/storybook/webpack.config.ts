@@ -9,6 +9,8 @@ export default ({ config }: { config: Configuration}) => {
         build: '',
         html: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
+        buildLocales: '',
+        locales: '',
     };
 
     config!.resolve!.modules = [paths.src, 'node_modules'];
