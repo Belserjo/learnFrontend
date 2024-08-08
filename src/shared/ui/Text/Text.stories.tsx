@@ -70,6 +70,22 @@ export const TextOnlyLight: Story = {
 };
 TextOnlyLight.decorators = [ThemeDecorator(Theme.LIGHT)];
 
+export const SizeS: Story = {
+    args: {
+        text: 'TEXT',
+        title: 'TITLE',
+        size: TextSize.S,
+    },
+};
+
+export const SizeM: Story = {
+    args: {
+        text: 'TEXT',
+        title: 'TITLE',
+        size: TextSize.M,
+    },
+};
+
 export const SizeL: Story = {
     args: {
         text: 'TEXT',

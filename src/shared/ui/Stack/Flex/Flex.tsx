@@ -1,21 +1,11 @@
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { ReactNode } from 'react';
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 import cls from './Flex.module.scss';
 
 export type FlexDirection = 'row' | 'column';
 export type FlexJustify = 'start' | 'center' | 'end' | 'between' | 'evenly' | 'around';
 export type FlexAlign = 'start' | 'center' | 'end';
 export type FlexGap = '4' | '8' | '16' | '24' | '32';
-
-export interface FlexProps {
-    className?: string;
-    children?: ReactNode;
-    direction?: FlexDirection;
-    justify?: FlexJustify;
-    align?: FlexAlign;
-    gap?: FlexGap;
-    max?: boolean
-}
 
 const alignClasses: Record<FlexAlign, string> = {
     start: cls.alignStart,
@@ -44,6 +34,18 @@ const gapClasses: Record<FlexGap, string> = {
     24: cls.gap24,
     32: cls.gap32,
 };
+
+type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+
+export interface FlexProps extends DivProps{
+    className?: string;
+    children?: ReactNode;
+    direction?: FlexDirection;
+    justify?: FlexJustify;
+    align?: FlexAlign;
+    gap?: FlexGap;
+    max?: boolean
+}
 
 export const Flex = (props: FlexProps) => {
     const {
