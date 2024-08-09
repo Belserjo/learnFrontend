@@ -48,7 +48,7 @@ const preview: Preview = {
                 date: /Date$/i,
             },
         },
-
+        layout: 'bottom',
     },
 };
 
